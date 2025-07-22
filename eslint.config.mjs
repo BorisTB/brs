@@ -1,4 +1,4 @@
-import nx from '@nx/eslint-plugin'
+import nx from '@nx/eslint-plugin';
 
 export default [
   ...nx.configs['flat/base'],
@@ -8,7 +8,9 @@ export default [
     ignores: [
       '**/dist',
       '**/vite.config.*.timestamp*',
-      '**/vitest.config.*.timestamp*'
+      '**/vitest.config.*.timestamp*',
+      '**/build',
+      '**/.react-router'
     ]
   },
   {
@@ -43,4 +45,4 @@ export default [
     // Override or add rules here
     rules: {}
   }
-]
+];
