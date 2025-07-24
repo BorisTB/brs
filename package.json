@@ -20,8 +20,6 @@
     "@nx/workspace": "21.3.1",
     "@playwright/test": "^1.36.0",
     "@react-router/dev": "7.7.0",
-    "@remix-run/dev": "2.16.8",
-    "@remix-run/node": "2.16.8",
     "@swc-node/register": "~1.9.1",
     "@swc/cli": "~0.6.0",
     "@swc/core": "~1.5.7",
