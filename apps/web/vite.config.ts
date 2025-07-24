@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import { reactRouter } from '@react-router/dev/vite';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
+import { cloudflare } from '@cloudflare/vite-plugin';
 import devtoolsJson from 'vite-plugin-devtools-json';
 import svgr from 'vite-plugin-svgr';
 
@@ -18,6 +19,8 @@ export default defineConfig(() => ({
     host: 'localhost'
   },
   plugins: [
+    !process.env.SKIP_WRANGLER &&
+      cloudflare({ viteEnvironment: { name: 'ssr' } }),
     !process.env.VITEST && reactRouter(),
     devtoolsJson(),
     nxViteTsPaths(),

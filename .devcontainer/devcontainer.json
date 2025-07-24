@@ -1,0 +1,27 @@
+{
+  "name": "brs DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22-bookworm",
+  "forwardPorts": [4211, 4873, 4200],
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "nrwl.angular-console",
+        "firsttris.vscode-jest-runner",
+        "eamodio.gitlens",
+        "mhutchie.git-graph",
+        "mutantdino.resourcemonitor" // to monitor cpu, memory usage from the dev container
+      ],
+      "settings": {
+        "debug.javascript.autoAttachFilter": "disabled" // workaround for that issue: https://github.com/microsoft/vscode-js-debug/issues/374#issuecomment-622239998
+      }
+    }
+  },
+
+  // To improve disk performances when installing node modules
+  // See https://code.visualstudio.com/remote/advancedcontainers/improve-performance
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ]
+}

@@ -49,3 +49,12 @@ vitest.config.*.timestamp*
 # Next.js
 .next
 out
+
+# Cloudflare
+.mf
+.wrangler
+.dev.vars*
+
+# .env files
+*.env
+!.env
