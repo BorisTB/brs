@@ -8,6 +8,7 @@ import {
   ScrollRestoration
 } from 'react-router';
 import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
+import { Analytics } from '@vercel/analytics/react';
 
 import '@fontsource-variable/geist';
 import '@mantine/core/styles.css';
@@ -47,6 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Analytics />
         <ThemeProvider>{children}</ThemeProvider>
         <ScrollRestoration />
         <Scripts />
