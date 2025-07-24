@@ -1,0 +1,96 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "../../dist/apps/web/server/nodejs_eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "root": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "app": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "app/root.tsx",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "layouts/dashboard": {
+        "id": "layouts/dashboard",
+        "parentId": "root",
+        "file": "app/layouts/dashboard.tsx",
+        "config": {}
+      },
+      "app": {
+        "id": "app",
+        "parentId": "layouts/dashboard",
+        "file": "app/app.tsx",
+        "index": true,
+        "config": {}
+      },
+      "routes/about": {
+        "id": "routes/about",
+        "parentId": "layouts/dashboard",
+        "file": "app/routes/about.tsx",
+        "path": "about",
+        "config": {}
+      }
+    }
+  },
+  "reactRouterConfig": {
+    "appDirectory": "/Users/boris/DEV/personal/brs/apps/web/app",
+    "basename": "/",
+    "buildDirectory": "/Users/boris/DEV/personal/brs/dist/apps/web",
+    "future": {
+      "unstable_middleware": false,
+      "unstable_optimizeDeps": false,
+      "unstable_splitRouteModules": false,
+      "unstable_subResourceIntegrity": false,
+      "unstable_viteEnvironmentApi": false
+    },
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "root.tsx"
+      },
+      "layouts/dashboard": {
+        "id": "layouts/dashboard",
+        "parentId": "root",
+        "file": "./layouts/dashboard.tsx"
+      },
+      "app": {
+        "id": "app",
+        "parentId": "layouts/dashboard",
+        "file": "./app.tsx",
+        "index": true
+      },
+      "routes/about": {
+        "id": "routes/about",
+        "parentId": "layouts/dashboard",
+        "file": "./routes/about.tsx",
+        "path": "about"
+      }
+    },
+    "routeDiscovery": {
+      "mode": "lazy",
+      "manifestPath": "/__manifest"
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
