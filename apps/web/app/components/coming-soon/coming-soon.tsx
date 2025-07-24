@@ -1,4 +1,4 @@
-import { Container, Group, Stack, Text } from '@mantine/core';
+import { Container, Stack, Text } from '@mantine/core';
 import styles from './coming-soon.module.css';
 import { MainCenter } from '../../ui';
 
@@ -7,7 +7,7 @@ export const ComingSoon = () => {
     <MainCenter>
       <Container size="md" className={styles.container}>
         <Stack gap="xl" align="center">
-          <Group ta={'center'} justify="center" gap={'xl'}>
+          <Stack ta="center" align="center" justify="center" gap={'xl'}>
             <Text
               fz={'4rem'}
               fw={600}
@@ -20,7 +20,7 @@ export const ComingSoon = () => {
               We're working hard to bring you more awesome block. Stay tuned for
               updates!
             </Text>
-          </Group>
+          </Stack>
         </Stack>
       </Container>
     </MainCenter>

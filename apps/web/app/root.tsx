@@ -19,9 +19,6 @@ import { DEFAULT_COLOR_SCHEME } from './app.constants';
 
 export const meta: MetaFunction = () => [
   {
-    title: 'brs'
-  },
-  {
     name: 'description',
     content:
       'Boris – Full-Stack React & TypeScript Developer | 10+ Years of Experience. Explore my portfolio and coding playground where I experiment with new technologies and showcase my projects.'
@@ -42,6 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
+        <title>brs</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <ColorSchemeScript defaultColorScheme={DEFAULT_COLOR_SCHEME} />

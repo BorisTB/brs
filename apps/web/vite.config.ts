@@ -4,6 +4,7 @@ import { reactRouter } from '@react-router/dev/vite';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 import devtoolsJson from 'vite-plugin-devtools-json';
+import svgr from 'vite-plugin-svgr';
 
 export default defineConfig(() => ({
   root: __dirname,
@@ -20,7 +21,16 @@ export default defineConfig(() => ({
     !process.env.VITEST && reactRouter(),
     devtoolsJson(),
     nxViteTsPaths(),
-    nxCopyAssetsPlugin(['*.md'])
+    nxCopyAssetsPlugin(['*.md']),
+    svgr({
+      svgrOptions: {
+        exportType: 'default',
+        ref: true,
+        svgo: false,
+        titleProp: true
+      },
+      include: '**/*.svg'
+    })
   ],
   // Uncomment this if you are using workers.
   // worker: {

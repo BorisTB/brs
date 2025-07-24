@@ -1,7 +1,7 @@
-import { ComingSoon } from './components/coming-soon/coming-soon';
+import { Hero } from './components/hero/hero';
 
 export function App() {
-  return <ComingSoon />;
+  return <Hero />;
 }
 
 export default App;

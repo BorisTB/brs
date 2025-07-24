@@ -31,11 +31,11 @@ import {
 } from '@mantine/core';
 
 const CONTAINER_SIZES: Record<string, string> = {
-  xxs: rem('200px'),
-  xs: rem('300px'),
-  sm: rem('400px'),
-  md: rem('500px'),
-  lg: rem('600px'),
+  xxs: rem('400px'),
+  xs: rem('520px'),
+  sm: rem('720px'),
+  md: rem('960px'),
+  lg: rem('1140px'),
   xl: rem('1400px'),
   xxl: rem('1600px')
 };
