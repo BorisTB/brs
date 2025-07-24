@@ -28,7 +28,9 @@ export default [
             }
           ]
         }
-      ]
+      ],
+      '@typescript-eslint/no-empty-interface': 0,
+      '@typescript-eslint/no-empty-object-type': 0
     }
   },
   {
