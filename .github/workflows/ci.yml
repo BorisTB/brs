@@ -35,7 +35,7 @@ jobs:
       # Cache node_modules
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: '.nvmrc'
           cache: 'pnpm'
 
       - run: pnpm install --frozen-lockfile
@@ -52,4 +52,5 @@ jobs:
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          workingDirectory: "apps/web"
+          workingDirectory: "./apps/web"
+          preCommands: "npx nx typecheck web"
