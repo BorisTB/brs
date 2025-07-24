@@ -1,9 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    ".react-router/types/**/*",
     "./@types/**/*",
-    "./*.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
     "app/**/*.js",
@@ -11,7 +9,9 @@
     "**/.server/**/*.ts",
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
+    "**/.client/**/*.tsx",
+    ".react-router/types/**/*",
+    "./react-router.config.ts"
   ],
   "exclude": [
     "tests/**/*.spec.ts",
@@ -36,6 +36,7 @@
     "src/**/*.spec.jsx"
   ],
   "compilerOptions": {
-    "types": ["node", "vite/client"]
+    "types": ["node", "vite/client"],
+    "rootDirs": [".", "./.react-router/types"]
   }
 }

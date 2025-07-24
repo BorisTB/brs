@@ -5,5 +5,16 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "typecheck": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/web",
+        "commands": [
+          "react-router typegen",
+          "tsc -p tsconfig.app.json --noEmit"
+        ],
+        "parallel": false
+      }
+    }
   }
 }
