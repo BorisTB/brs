@@ -5,8 +5,5 @@
   "projectType": "application",
   "tags": [],
   "targets": {
-    "deploy": {
-      "executor": "@k11r/nx-cloudflare-wrangler:deploy-page"
-    }
   }
 }
