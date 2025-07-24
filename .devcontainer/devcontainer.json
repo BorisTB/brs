@@ -1,7 +1,7 @@
 {
   "name": "brs DevContainer",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:22-bookworm",
-  "forwardPorts": [4211, 4873, 4200],
+  "forwardPorts": [4211, 4873, 4200, 8976],
   "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "remoteUser": "root",
   "customizations": {

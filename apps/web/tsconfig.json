@@ -21,9 +21,6 @@
       "path": "./tsconfig.app.json"
     },
     {
-      "path": "./tsconfig.cloudflare.json"
-    },
-    {
       "path": "./tsconfig.spec.json"
     }
   ],

@@ -48,9 +48,3 @@ jobs:
       - run: pnpm exec nx fix-ci
         if: always()
 
-      - uses: cloudflare/wrangler-action@v3
-        with:
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          workingDirectory: "./apps/web"
-          preCommands: "npx nx typecheck web"
