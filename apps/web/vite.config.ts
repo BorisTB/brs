@@ -1,7 +1,6 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import { reactRouter } from '@react-router/dev/vite';
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 import devtoolsJson from 'vite-plugin-devtools-json';
 import svgr from 'vite-plugin-svgr';
@@ -20,7 +19,6 @@ export default defineConfig(() => ({
   plugins: [
     !process.env.VITEST && reactRouter(),
     devtoolsJson(),
-    nxViteTsPaths(),
     nxCopyAssetsPlugin(['*.md']),
     svgr({
       svgrOptions: {
@@ -37,7 +35,7 @@ export default defineConfig(() => ({
   //  plugins: [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: '../../dist/apps/web',
+    outDir: './build',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
