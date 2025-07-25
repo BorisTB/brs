@@ -5,6 +5,32 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "build": {
+      "cache": true,
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production",
+        {
+          "externalDependencies": [
+            "@react-router/dev"
+          ]
+        }
+      ],
+      "outputs": [
+        "{workspaceRoot}/apps/web/build/client",
+        "{workspaceRoot}/apps/web/build/server"
+      ],
+      "options": {
+        "cwd": "apps/web",
+        "command": "react-router build"
+      },
+      "executor": "nx:run-commands",
+      "configurations": {},
+      "parallelism": true
+    },
     "typecheck": {
       "executor": "nx:run-commands",
       "options": {
