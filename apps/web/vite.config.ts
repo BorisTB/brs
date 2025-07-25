@@ -4,7 +4,7 @@ import { reactRouter } from '@react-router/dev/vite';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 import devtoolsJson from 'vite-plugin-devtools-json';
 import svgr from 'vite-plugin-svgr';
-import vercel from 'vite-plugin-vercel';
+import tsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(() => ({
   root: __dirname,
@@ -18,8 +18,8 @@ export default defineConfig(() => ({
     host: 'localhost'
   },
   plugins: [
-    vercel(),
     !process.env.VITEST && reactRouter(),
+    tsConfigPaths(),
     devtoolsJson(),
     nxCopyAssetsPlugin(['*.md']),
     svgr({

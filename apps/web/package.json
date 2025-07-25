@@ -2,7 +2,9 @@
   "name": "web",
   "private": true,
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "start": "react-router-serve ./build/server/index.js"
+  },
   "sideEffects": false,
   "dependencies": {
     "@react-router/node": "7.7.0",

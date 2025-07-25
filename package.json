@@ -57,6 +57,7 @@
     "vite-plugin-devtools-json": "0.3.0",
     "vite-plugin-svgr": "4.3.0",
     "vite-plugin-vercel": "9.0.7",
+    "vite-tsconfig-paths": "5.1.4",
     "vitest": "^3.0.0"
   },
   "packageManager": "pnpm@10.13.1",
