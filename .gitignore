@@ -55,6 +55,9 @@ out
 .wrangler
 .dev.vars*
 
+# Vercel
+.vercel
+
 # .env files
 *.env
 !.env
