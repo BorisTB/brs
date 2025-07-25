@@ -50,18 +50,20 @@ export const Hero = (props: HeroProps) => {
                   size="sm"
                   style={{ letterSpacing: 1 }}
                   tt="uppercase">
-                  Full-Stack Web App Engineer
+                  I build the future, upgrade the past
                 </Text>
               </Group>
 
               <Title className={classes?.title} order={1} size="h1">
-                I build the future, upgrade the past
+                Full-Stack Web App Engineer
               </Title>
 
               <Text size="xl" c="dimmed" maw={600}>
-                Helped to build and modernize many large-scale projects used by
-                thousands of people, including internal portals, real-time
-                monitoring tools, robust identity management systems and more...
+                Hi, I'm Boris, and I'm really good at building and modernizing
+                web applications. With 10+ years of experience, I've helped many
+                large-scale projects used by thousands of people, including
+                internal portals, real-time monitoring tools, robust identity
+                management systems and more...
               </Text>
 
               <Flex
