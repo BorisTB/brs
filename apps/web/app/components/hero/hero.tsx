@@ -36,7 +36,7 @@ export const Hero = (props: HeroProps) => {
     <Box>
       <Container size="xl" py={100}>
         <Grid gutter={40} align="center">
-          <Grid.Col span={{ base: 12, md: 7 }}>
+          <Grid.Col span={{ base: 12, md: 8 }}>
             <Stack gap="xl">
               <Group gap={'xs'}>
                 <ThemeIcon size="lg" radius="md" variant="transparent">
@@ -45,11 +45,7 @@ export const Hero = (props: HeroProps) => {
                     color="var(--mantine-primary-color-filled)"
                   />
                 </ThemeIcon>
-                <Text
-                  fw={500}
-                  size="sm"
-                  style={{ letterSpacing: 1 }}
-                  tt="uppercase">
+                <Text fw={500} size="sm" style={{ letterSpacing: 1 }}>
                   I build the future, upgrade the past
                 </Text>
               </Group>
