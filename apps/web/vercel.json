@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npx nx build web",
+  "framework": "react-router",
+  "devCommand": "npx nx dev web",
+  "installCommand": "pnpm install",
+  "outputDirectory": "build"
+}
