@@ -20,6 +20,7 @@
         }
       ],
       "outputs": [
+        "{workspaceRoot}/apps/web/.vercel/react-router-build-result.json",
         "{workspaceRoot}/apps/web/build/client",
         "{workspaceRoot}/apps/web/build/server"
       ],
@@ -33,6 +34,9 @@
     },
     "typecheck": {
       "executor": "nx:run-commands",
+      "outputs": [
+        "{workspaceRoot}/apps/web/.react-router"
+      ],
       "options": {
         "cwd": "apps/web",
         "commands": [
